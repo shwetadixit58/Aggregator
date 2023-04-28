@@ -152,7 +152,6 @@ class PrivateJobTitleApiTests(TestCase):
         )
 
         res = self.client.get(JOB_TITLE_URL)
-
         job_titles = JobTitle.objects.all()
         job_titles = job_titles.filter(user=self.user).order_by("-id")
         serializer = JobTitleSerializer(job_titles, many=True)

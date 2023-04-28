@@ -15,6 +15,7 @@ router = DefaultRouter()
 app_name = "jobtitle"
 router.register("jobtitles", views.JobTitleViewSet)
 
+print(f"router.urls :: {router.urls}")
 
 urlpatterns = [
     path("", include(router.urls))
