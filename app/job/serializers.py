@@ -3,7 +3,7 @@ Serializers for Job API
 """
 
 from rest_framework import serializers
-from core.models import JobTitle, Portal
+from core.models import JobTitleSerializer, Portal
 
 
 class JobTitleSerializer(serializers.ModelSerializer):
@@ -11,7 +11,7 @@ class JobTitleSerializer(serializers.ModelSerializer):
     Serializer class for JobTitle list view
     """
     class Meta:
-        model = JobTitle
+        model = JobTitleSerializer
         fields = ["id", "title"]
         read_only_fields = ["id"]
 
